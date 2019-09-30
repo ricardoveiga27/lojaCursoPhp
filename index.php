@@ -1,5 +1,7 @@
 <?php
-    $nomeSistema = "siteTeste";
+    $nomeSistema = "Cursos e Ai";
+    $usuario = ["nome"=>" Ricardo Veiga"]
+
 ?>
 
 <!DOCTYPE html>
@@ -14,28 +16,91 @@
 
 <body>
 
-<header class="d-flex justify-content-between aling-items-center">
+<header class="navbar">
     <h1 id="logo">
-     <?php echo $nomeSistema; ?>
+     <?php echo $nomeSistema; 
+     echo "   ".$nometeste."    ". $sobrenome ?>
       </h1>
         <nav>
             <ul class="nav">
-                <li class="nav-item">Cursos</li>
-                <li class="nav-item">login</li>
-                <li class="nav-item">login</li>
+
+                <?php if(isset($usuario) && $usuario != []){?>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cursos</a>
+                    </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ola <?php echo $usuario ['nome']?> </a>
+                    </li>
+                <?php }else {?>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cadastrar</a>
+                    </li>
+
+                <?php }?>
+
             </ul>
         </nav>
-
-
 </header>
 
-    <?php
-        $nome="ricardo";
-        $idade=10;
-        $usuario=["ricardo","veiga", 38];
+<main>
+    <section class="container mt-4">
 
-        echo $nome;
+        <div class="row justify-content-around">
+            <div class="col-lg3 card text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Título Produto</h2>
+                        <img class="card-img-top" src="images/imagem1.png" alt="Imagem de capa do card">
+                        <h5 class="card-text">R$ 100,00</h5>
+                        <a href="#" class="btn btn-primary">comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg3 card text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Título Produto</h2>
+                        <img class="card-img-top" src="images/imagem1.png" alt="Imagem de capa do card">
+                        <h5 class="card-text">R$ 100,00</h5>
+                        <a href="#" class="btn btn-primary">comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg3 card text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Título Produto</h2>
+                        <img class="card-img-top" src="images/imagem1.png" alt="Imagem de capa do card">
+                        <h5 class="card-text">R$ 100,00</h5>
+                        <a href="#" class="btn btn-primary">comprar</a>
+                    </div>
+                </div>
+            </div>
+
+    
+
+        </div>
+
+    </section>
+
+
+</main>
+
+    <?php
+        // $nome="ricardo";
+        // $usuario=["ricardo","veiga", 38];
+
+        // echo $nome;
     ?>
+    
     
 </body>
 </html>
