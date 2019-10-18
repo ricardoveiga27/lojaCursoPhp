@@ -27,11 +27,11 @@
 
                     <?php foreach ($produtos as $produto) { ?>
 
-                        <div class="col-lg-3 card text-center">
-                            <div class="card">
+                        <div class="col-lg-3 card border border-0 text-center p-3">
+                            <div class="card border border-info"  >
                                 <div class="card-body">
                                     <h2 class="card-title"> <?php echo $produto['nome'] ?> </h2>
-                                    <img class="card-img-top img-fluid" src="<?php echo $produto["image"] ?>" alt="Imagem de capa do card">
+                                    <img class="card-img-top img-fluid" src="<?php echo $produto['img'] ?>" alt="Imagem de capa do card">
                                     <h5 class="card-text p-3"> <?php echo "R$ " . $produto['preco'] ?> </h5>
                                     <a href="carrinho.php?nomeProduto=<?php echo $produto["nome"] ?>" class="btn btn-primary">comprar</a>
                                 </div>
@@ -41,7 +41,7 @@
                     <?php } ?>
 
                 <?php } else { ?>
-                    <h1> Não tem nada nessa seçao :( </h1>
+                    <h1> Não tem nada nessa sessão :( </h1>
                 <?php } ?>
 
 

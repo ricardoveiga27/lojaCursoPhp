@@ -1,4 +1,4 @@
-
+<?php include_once("config/variaveis.php") ?>
 <header class="navbar">
 <h1 id="logo">
     <?php echo $nomeSistema;
@@ -16,14 +16,18 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Ola <?php echo $usuario['nome'] ?> </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sair.php"> Sair </a>
+            </li>
+            
         <?php } else { ?>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="login.php">Login</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Cadastrar</a>
+                <a class="nav-link" href="cadastroProduto.php">Cadastrar</a>
             </li>
 
         <?php } ?>
@@ -40,7 +44,7 @@
         <?php foreach ($categorias as $catetegoria) { ?>
 
             <li class="nav-item">
-                <a class="nav-link text-white" href="#"> <?php echo $catetegoria . " >>>>>>>" ?> </a>
+                <a class="nav-link text-white" href="#"> <?php echo $catetegoria?> </a>
             </li>
 
         <?php } ?>
